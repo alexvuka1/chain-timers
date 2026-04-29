@@ -1,0 +1,31 @@
+{
+  "name": "chain-timers",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "latest",
+    "@tailwindcss/vite": "latest",
+    "@vitejs/plugin-react": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "jotai": "^2.19.1",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-use": "^17.6.0",
+    "tailwind-merge": "latest",
+    "tailwindcss": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
