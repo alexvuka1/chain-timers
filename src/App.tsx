@@ -287,6 +287,12 @@ function useTimerCountdown({
   );
 }
 
+function useDocumentTitle(title: string) {
+  useEffect(() => {
+    document.title = title;
+  }, [title]);
+}
+
 export default function App() {
   const [timers, setTimers] = useAtom(timersAtom);
   const [chainTitle, setChainTitle] = useAtom(chainTitleAtom);
@@ -331,6 +337,7 @@ export default function App() {
     onExpire: finishTimer,
     setRemainingMs,
   });
+  useDocumentTitle(activeTimer ? `${formatTime(remainingMs)} - ${chainTitle || 'Chain timers'}` : chainTitle || 'Chain timers');
 
   function triggerAlarm(timerName: string): void {
     setAlarm((current) => ({
